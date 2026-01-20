@@ -47,7 +47,7 @@ cac-portal/
 
 
 Setup Instructions
-git clone https://github.com/yourusername/cac-portal.git
+git clone https://github.com/baalebo-cloud/cac-portal.git
 cd cac-portal
 python -m venv venv
 source venv/bin/activate
