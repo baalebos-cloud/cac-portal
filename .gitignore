@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+.flASKENV
+
+# Database files
+*.db
+instance/
+
+# Uploads
+uploads/
+
+# Migrations cache
+migrations/__pycache__/
+
+# OS
+.DS_Store

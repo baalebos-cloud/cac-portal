@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h2>Admin Dashboard</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Business</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for app in applications %}
+            <tr>
+                <td>{{ app.owner_name }}</td>
+                <td>{{ app.business_name }}</td>
+                <td>{{ app.status }}</td>
+                <td>
+                    <a href="#" onclick="return confirmAction()" class="btn btn-success">
+                        Approve
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %
+

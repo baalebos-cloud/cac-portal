@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h2>Upload Documents</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Valid ID</label>
+        <input type="file" name="id_card" required>
+
+        <label>Passport Photograph</label>
+        <input type="file" name="passport" required>
+
+        <button class="btn btn-success">Upload</button>
+    </form>
+</div>
+
+{% endblock %}

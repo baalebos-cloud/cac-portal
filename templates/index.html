@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h1>Welcome to CAC Portal</h1>
+    <p>Register business names, upload documents, and track approvals easily.</p>
+
+    <a href="{{ url_for('business.business_name') }}" class="btn">
+        Start Business Registration
+    </a>
+</div>
+
+{% endblock %}

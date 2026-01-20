@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Business Portal</h1>
+<p>Welcome! Here you can view existing businesses or submit a new one.</p>
+
+<!-- Flash messages -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<!-- Submit New Business Form -->
+<div class="business-form">
+  <h2>Submit a New Business Name</h2>
+  <form action="{{ url_for('business_name.submit_business_name') }}" method="POST">
+    <label for="business_name">Business Name:</label>
+    <input type="text" name="business_name" id="business_name" required>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<!-- List of Existing Businesses -->
+<div class="business-list">
+  <h2>Existing Businesses</h2>
+  {% if businesses %}
+    <ul>
+      {% for b in businesses %}
+        <li>{{ b.name }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No businesses registered yet.</p>
+  {% endif %}
+</div>
+
+{% endblock %}

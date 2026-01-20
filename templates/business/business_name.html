@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h2>Business Name Registration</h2>
+
+    <form method="POST">
+        <label>Proposed Business Name</label>
+        <input type="text" name="business_name" required>
+
+        <label>Business Type</label>
+        <select name="business_type" required>
+            <option value="">Select</option>
+            <option>Sole Proprietorship</option>
+            <option>Partnership</option>
+            <option>Limited Liability Company</option>
+        </select>
+
+        <label>Owner Full Name</label>
+        <input type="text" name="owner_name" required>
+
+        <button class="btn">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

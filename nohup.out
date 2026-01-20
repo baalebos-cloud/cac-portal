@@ -1,0 +1,1424 @@
+ * Serving Flask app 'app.py'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.0.21.62:8000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 580-977-639
+127.0.0.1 - - [17/Jan/2026 02:43:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Jan/2026 02:54:38] "GET / HTTP/1.1" 200 -
+54.234.136.35 - - [17/Jan/2026 03:14:55] "GET / HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:15:08] "GET / HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:15:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:15:36] "[32mGET /ngo HTTP/1.1[0m" 308 -
+102.89.83.9 - - [17/Jan/2026 03:15:36] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/ngo.py", line 45, in register_ngo
+    return render_template("ngo.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/ngo.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 16, in top-level template code
+    <a href="{{ url_for('index') }}">Home</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'business_name.index' instead?
+102.89.83.9 - - [17/Jan/2026 03:15:36] "GET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:15:37] "GET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:15:37] "GET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:15:38] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:16:07] "[32mGET /company HTTP/1.1[0m" 308 -
+102.89.83.9 - - [17/Jan/2026 03:16:07] "[35m[1mGET /company/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/company.py", line 44, in register_company
+    return render_template("company.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/company.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 16, in top-level template code
+    <a href="{{ url_for('index') }}">Home</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'business_name.index' instead?
+102.89.83.9 - - [17/Jan/2026 03:16:07] "GET /company/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:16:08] "GET /company/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:16:09] "GET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:16:09] "[36mGET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:17:16] "[33mGET /business HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:17:29] "[33mGET /businessName HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:17:43] "[32mGET /business-name HTTP/1.1[0m" 308 -
+102.89.83.9 - - [17/Jan/2026 03:17:43] "GET /business-name/ HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:19:54] "[33mGET /admin HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:20:08] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:20:23] "[33mGET /auth/admin HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:20:33] "GET / HTTP/1.1" 200 -
+54.234.136.35 - - [17/Jan/2026 03:21:46] "GET / HTTP/1.1" 200 -
+77.90.185.28 - - [17/Jan/2026 03:21:53] "GET / HTTP/1.1" 200 -
+102.89.83.9 - - [17/Jan/2026 03:27:59] "[35m[1mGET /company/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/company.py", line 44, in register_company
+    return render_template("company.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/company.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 16, in top-level template code
+    <a href="{{ url_for('index') }}">Home</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'business_name.index' instead?
+102.89.83.9 - - [17/Jan/2026 03:28:00] "[36mGET /company/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:28:00] "[36mGET /company/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:28:02] "[36mGET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:28:02] "[36mGET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:28:48] "[33mGET /business_name.index HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:29:02] "[33mGET /business_name HTTP/1.1[0m" 404 -
+102.89.83.9 - - [17/Jan/2026 03:29:17] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/ngo.py", line 45, in register_ngo
+    return render_template("ngo.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/ngo.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 16, in top-level template code
+    <a href="{{ url_for('index') }}">Home</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'business_name.index' instead?
+102.89.83.9 - - [17/Jan/2026 03:29:17] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:29:18] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.83.9 - - [17/Jan/2026 03:29:18] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+152.32.134.166 - - [17/Jan/2026 03:29:48] "GET / HTTP/1.1" 200 -
+152.32.134.166 - - [17/Jan/2026 03:29:49] code 400, message Bad request version ('À\x13À')
+152.32.134.166 - - [17/Jan/2026 03:29:49] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03­k\x80cC\x175\x14\x13KúØ±A2½Ùì©\x86¦2\x9a­\x03WY:\x0c½=C £]\x1fÉ~IsIK\x93"\x97M\x06ý\x0dCË)É\x84\x8cf\x88×Ð \x12Õ5±\x14\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+152.32.134.166 - - [17/Jan/2026 03:29:50] code 400, message Bad HTTP/0.9 request type ('t3')
+152.32.134.166 - - [17/Jan/2026 03:29:50] "[31m[1mt3 12.1.2[0m" 400 -
+152.32.135.81 - - [17/Jan/2026 03:30:12] "GET / HTTP/1.1" 200 -
+152.32.135.81 - - [17/Jan/2026 03:30:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+152.32.135.81 - - [17/Jan/2026 03:30:13] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
+152.32.135.81 - - [17/Jan/2026 03:30:14] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+162.142.125.192 - - [17/Jan/2026 04:24:15] "GET / HTTP/1.1" 200 -
+162.142.125.192 - - [17/Jan/2026 04:24:20] code 400, message Bad request version ('À\x14À')
+162.142.125.192 - - [17/Jan/2026 04:24:20] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¶M¥ÊÄK\x86#@ñæ³h¨\x7fï¡sV]B\x02Nw¥®ÈÈW<"f Ü\x80´ïÂ\x01Ü\x83Û»\x0c\x12|µ\x9bv·¿º§BÖC\x8f\x13.\x93¿\x15pLÍ\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+162.142.125.192 - - [17/Jan/2026 04:24:22] "GET / HTTP/1.1" 200 -
+162.142.125.192 - - [17/Jan/2026 04:24:22] code 505, message Invalid HTTP version (2.0)
+162.142.125.192 - - [17/Jan/2026 04:24:22] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+162.142.125.192 - - [17/Jan/2026 04:24:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+162.142.125.192 - - [17/Jan/2026 04:24:25] code 400, message Bad request version ('À\x14À')
+162.142.125.192 - - [17/Jan/2026 04:24:25] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03p¯#àEF\x1aì\x80³\x01äÁß|á©Â\x82á\x9f\x06N\x13Q'P\x84\x9d\x15\x04\x9a \x8a\x8b¾-fî\x98ÔÁg\x1c:\x10\x15$\x8e^\x0d&\x99Là+\x85ÓEqóº\x93}9\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+162.142.125.192 - - [17/Jan/2026 04:24:28] "[33mGET /security.txt HTTP/1.1[0m" 404 -
+204.76.203.18 - - [17/Jan/2026 07:08:49] "GET / HTTP/1.1" 200 -
+204.76.203.18 - - [17/Jan/2026 07:17:15] "[33mGET /bins/ HTTP/1.1[0m" 404 -
+204.76.203.18 - - [17/Jan/2026 07:37:13] "[33mGET /bin/ HTTP/1.1[0m" 404 -
+204.76.203.18 - - [17/Jan/2026 07:44:13] "[33mGET /backup/ HTTP/1.1[0m" 404 -
+199.45.154.122 - - [17/Jan/2026 07:54:41] "GET / HTTP/1.1" 200 -
+199.45.154.122 - - [17/Jan/2026 07:54:45] code 400, message Bad request version ('À\x14À')
+199.45.154.122 - - [17/Jan/2026 07:54:45] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03R~\x1aY¸\x96ôX\x86ÎÏ\x98Wc¸\x8dÊf0>\x9aÒ(ú÷í\x13W\x0ed×Z Å¿s\x8dÝ2Û®Ï1y/\x86\x90c\x8fÿ\x8dt\x87rAq\x8bó\x8dð Ó\x84\x84\x06\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+199.45.154.122 - - [17/Jan/2026 07:54:46] "GET / HTTP/1.1" 200 -
+199.45.154.122 - - [17/Jan/2026 07:54:47] code 505, message Invalid HTTP version (2.0)
+199.45.154.122 - - [17/Jan/2026 07:54:47] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+199.45.154.122 - - [17/Jan/2026 07:54:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+199.45.154.122 - - [17/Jan/2026 07:54:54] code 400, message Bad request version ('À\x14À')
+199.45.154.122 - - [17/Jan/2026 07:54:54] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Z\x9fQ\x0e\x1a\x02ò'ýCÖ²ê;Íý\x12·P\x10Èº\x16WÉ\x82\x1cRy«×T ¨J\x86\x13"º\x85þÌð#"\x1bª¡ÎoøÙò\x96F\x02¢\x93\x19\x98ñÝ`hz\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+199.45.154.122 - - [17/Jan/2026 07:54:55] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+107.170.21.204 - - [17/Jan/2026 08:24:26] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03²Ýr{¼¯û\x95à9l}®VÜ\x8e\x94Å~RÉ2>3KS\x1b_'\x01+Ã\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+107.170.21.204 - - [17/Jan/2026 08:24:26] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03²Ýr{¼¯û\x95à9l}®VÜ\x8e\x94Å~RÉ2>3KS\x1b_'\x01+Ã\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+107.170.21.204 - - [17/Jan/2026 08:24:26] code 400, message Bad request version ('À\x14À')
+107.170.21.204 - - [17/Jan/2026 08:24:26] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x00£{vþéà¸äx×r\x0dXE×Ïû<\x88î\x18­÷\x19\x15\x03£ðL|v\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+107.170.21.204 - - [17/Jan/2026 08:24:26] "GET / HTTP/1.1" 200 -
+107.170.21.204 - - [17/Jan/2026 08:24:26] "[33mGET /login HTTP/1.1[0m" 404 -
+3.134.148.59 - - [17/Jan/2026 10:48:05] "GET / HTTP/1.1" 200 -
+3.134.148.59 - - [17/Jan/2026 10:50:26] code 400, message Bad request version ('À\x14À')
+3.134.148.59 - - [17/Jan/2026 10:50:26] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03³\x03$Þ´\x0bÆ\x85Ý}\x13¬\x8aT\x13S\x84_ì\x0b\x8f\x06\x0fó\x8aO\x81ðxíDº\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+3.134.148.59 - - [17/Jan/2026 10:51:31] code 400, message Bad request syntax ('SSH-2.0-Go')
+3.134.148.59 - - [17/Jan/2026 10:51:31] "[31m[1mSSH-2.0-Go[0m" 400 -
+3.134.148.59 - - [17/Jan/2026 10:52:35] code 400, message Bad request version ('À\x14À')
+3.134.148.59 - - [17/Jan/2026 10:52:35] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03E\x89×ïï\x9a\x85\x8fÑêÑM×Ø\x81\x8c\x04ºÐ£\x0b\x8bO\x09\x87òaî\x0cÞ\x8a[\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+94.231.206.130 - - [17/Jan/2026 13:23:42] code 400, message Bad request version ('À#À¬À®À+À')
+94.231.206.130 - - [17/Jan/2026 13:23:42] "[31m[1m\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03C÷ç\x11 \x01íþ©Üì\x00\x8c?=¶Ã\x06"Ãô2.`\x03§\x1dÑ\x8f¶¦\x9e \x98í\x7fÅ¯Ng\x1fVðÃ25\x0e±*Y|\x16ëSB¾"Q o4G&¨×\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\x09À#À¬À®À+À[0m" 400 -
+94.231.206.133 - - [17/Jan/2026 13:23:46] "GET / HTTP/1.1" 200 -
+94.231.206.154 - - [17/Jan/2026 13:26:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+194.187.176.60 - - [17/Jan/2026 15:31:16] "GET / HTTP/1.1" 200 -
+194.187.176.8 - - [17/Jan/2026 15:31:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+199.45.155.106 - - [17/Jan/2026 17:52:40] "GET / HTTP/1.1" 200 -
+199.45.155.106 - - [17/Jan/2026 17:52:44] code 400, message Bad request version ('À\x14À')
+199.45.155.106 - - [17/Jan/2026 17:52:44] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x037-ò¡® îõ¾9ÔAÕ\x8a¶ÙL;\x14+ýR\x01ÊM\x82ÀÃ\x82i²ô .\x97à-e\x94à\x1b$ÖåRR\x1a\x98>\x12á\x1b\x01ì\x0e\x09¸¼\x02\x93wE¯\x964\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+199.45.155.106 - - [17/Jan/2026 17:52:46] "GET / HTTP/1.1" 200 -
+199.45.155.106 - - [17/Jan/2026 17:52:47] code 505, message Invalid HTTP version (2.0)
+199.45.155.106 - - [17/Jan/2026 17:52:47] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+199.45.155.106 - - [17/Jan/2026 17:52:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+199.45.155.106 - - [17/Jan/2026 17:52:51] code 400, message Bad request version ('À\x14À')
+199.45.155.106 - - [17/Jan/2026 17:52:51] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ýlp³+}\x0eÕ«\x9còxºs\x1c\x04\x01\x96ï\x8e=o\x02ÆÔ¯D\x1e)5\x85  Î\x80²\x02;i\x7f2\x97Ò2¦¯\x91j.1\x9a\x0cuºøäÉ\x0fÓhl'\x81>Æ\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+199.45.155.106 - - [17/Jan/2026 17:52:52] "[33mGET /login HTTP/1.1[0m" 404 -
+204.76.203.93 - - [17/Jan/2026 23:45:30] "[33mGET http://httpbin.org/ip HTTP/1.1[0m" 404 -
+91.231.89.59 - - [18/Jan/2026 01:20:51] code 400, message Bad request version ('À#À¬À®À+À')
+91.231.89.59 - - [18/Jan/2026 01:20:51] "[31m[1m\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03/«\x18"¤´/±gïÖÃLN\x0e\x98«óÛÿÉ\x8e \x04Êf'àÒÚ\x03= \x14Ò\x92+ág´<\x19\x1b¶\x8f"±#¡\x9e}Ð\x03Þº=áÂ!@\x03^³òÂ\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\x09À#À¬À®À+À[0m" 400 -
+91.231.89.62 - - [18/Jan/2026 01:20:54] "GET / HTTP/1.1" 200 -
+91.196.152.35 - - [18/Jan/2026 01:23:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+13.89.125.224 - - [18/Jan/2026 02:50:45] "GET / HTTP/1.1" 200 -
+13.89.125.224 - - [18/Jan/2026 02:50:45] code 400, message Bad request syntax ('MGLNDD_54.234.136.35_8000')
+13.89.125.224 - - [18/Jan/2026 02:50:45] "[31m[1mMGLNDD_54.234.136.35_8000[0m" 400 -
+176.65.149.182 - - [18/Jan/2026 04:03:05] "[33mCONNECT ipv4-internet.yandex.net:443 HTTP/1.1[0m" 404 -
+68.183.18.174 - - [18/Jan/2026 04:20:40] "GET / HTTP/1.1" 200 -
+68.183.18.174 - - [18/Jan/2026 04:20:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+143.198.22.180 - - [18/Jan/2026 05:48:10] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03~It®{§Û¤Å%ìØ\x8e¼U¼7¤L-Ñcp\x05Ç×¾d\x14õÕm\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+143.198.22.180 - - [18/Jan/2026 05:48:10] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03~It®{§Û¤Å%ìØ\x8e¼U¼7¤L-Ñcp\x05Ç×¾d\x14õÕm\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+143.198.22.180 - - [18/Jan/2026 05:48:10] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ë\x93\x16~`\xadnÝÜ\x88\x9ep¸uûÉCBCN£B'Yj\x10§QbÂPº\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+143.198.22.180 - - [18/Jan/2026 05:48:10] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ë\x93\x16~`­nÝÜ\x88\x9ep¸uûÉCBCN£B'Yj\x10§QbÂPº\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+143.198.22.180 - - [18/Jan/2026 05:48:10] "GET / HTTP/1.1" 200 -
+143.198.22.180 - - [18/Jan/2026 05:48:10] "[33mGET /login HTTP/1.1[0m" 404 -
+165.22.14.246 - - [18/Jan/2026 06:50:57] "GET / HTTP/1.1" 200 -
+165.22.14.246 - - [18/Jan/2026 06:50:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+204.76.203.18 - - [18/Jan/2026 06:57:29] "GET / HTTP/1.1" 200 -
+204.76.203.18 - - [18/Jan/2026 07:01:01] "[33mGET /bins/ HTTP/1.1[0m" 404 -
+204.76.203.18 - - [18/Jan/2026 07:10:37] "[33mGET /bin/ HTTP/1.1[0m" 404 -
+204.76.203.18 - - [18/Jan/2026 07:29:17] "[33mGET /backup/ HTTP/1.1[0m" 404 -
+3.134.148.59 - - [18/Jan/2026 11:10:59] "GET / HTTP/1.1" 200 -
+3.134.148.59 - - [18/Jan/2026 11:12:59] "GET / HTTP/1.1" 200 -
+3.134.148.59 - - [18/Jan/2026 11:14:41] code 400, message Bad request version ('À\x14À')
+3.134.148.59 - - [18/Jan/2026 11:14:41] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03IHíÆ£^\\Os.8E\\Ãgõ4(ÊÆ¼Wp\x85½u>ÿ\x83R:ü\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+3.134.148.59 - - [18/Jan/2026 11:16:17] code 400, message Bad request syntax ('SSH-2.0-Go')
+3.134.148.59 - - [18/Jan/2026 11:16:17] "[31m[1mSSH-2.0-Go[0m" 400 -
+3.134.148.59 - - [18/Jan/2026 11:17:29] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03+\x98\x90k±{É\x81\x18v,*\x92\x82ËÌK0`+)\x94@¨¯\x96ñá\x9f\x04\x8cL\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+3.134.148.59 - - [18/Jan/2026 11:17:29] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03+\x98\x90k±{É\x81\x18v,*\x92\x82ËÌK0`+)\x94@¨¯\x96ñá\x9f\x04\x8cL\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+185.247.137.66 - - [18/Jan/2026 12:17:38] "GET / HTTP/1.1" 200 -
+60.191.125.35 - - [18/Jan/2026 15:32:00] "HEAD http://112.124.42.80:63435/ HTTP/1.1" 200 -
+216.180.246.169 - - [18/Jan/2026 18:28:26] code 400, message Bad request version ('À\x14À')
+216.180.246.169 - - [18/Jan/2026 18:28:26] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03fgRÊ\x97¥AÍíÿm\x00È\x9f/ÑÍâ+;<\x8epWø.\x0dËÔGù\x14 å£\x8f\x04°îK/¾ë<.ù1¾Ôyå\x9815aE`"Ö4¬B\x07ÕË\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+216.180.246.169 - - [18/Jan/2026 18:28:55] "GET / HTTP/1.1" 200 -
+216.180.246.169 - - [18/Jan/2026 18:35:33] code 400, message Bad request syntax ('\x16\x03\x01\x00ú\x01\x00\x00ö\x03\x03^\x13\x8fGñueSV\x13\x99#É¨He\x15\x08')
+216.180.246.169 - - [18/Jan/2026 18:35:33] "[31m[1m\x16\x03\x01\x00ú\x01\x00\x00ö\x03\x03^\x13\x8fGñueSV\x13\x99#É¨He\x15\x08[0m" 400 -
+216.180.246.169 - - [18/Jan/2026 18:35:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+54.234.136.35 - - [18/Jan/2026 21:46:11] "GET / HTTP/1.1" 200 -
+102.89.76.164 - - [18/Jan/2026 22:00:28] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/ngo.py", line 45, in register_ngo
+    return render_template("ngo.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/ngo.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('business.business_name') }}">Business Name</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'business.business_name'. Did you mean 'business_name.index' instead?
+102.89.76.164 - - [18/Jan/2026 22:00:28] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:00:28] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:00:30] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:00:30] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+ * Detected change in '/home/ubuntu/cac-portal/routes/business_name.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 262, in locate_app
+    return find_best_app(module)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 72, in find_best_app
+    app = app_factory()
+          ^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/app.py", line 26, in create_app
+    from routes.business_name import business_name_bp
+  File "/home/ubuntu/cac-portal/routes/business_name.py", line 7, in <module>
+    @business_bp.route("/index", endpoint="index")
+     ^^^^^^^^^^^
+NameError: name 'business_bp' is not defined. Did you mean: 'business_name_bp'?
+ * Debugger is active!
+ * Debugger PIN: 201-284-682
+102.89.76.164 - - [18/Jan/2026 22:07:22] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 974, in app
+    raise err from None
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 262, in locate_app
+    return find_best_app(module)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 72, in find_best_app
+    app = app_factory()
+          ^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/app.py", line 26, in create_app
+    from routes.business_name import business_name_bp
+  File "/home/ubuntu/cac-portal/routes/business_name.py", line 7, in <module>
+    @business_bp.route("/index", endpoint="index")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'business_bp' is not defined. Did you mean: 'business_name_bp'?
+102.89.76.164 - - [18/Jan/2026 22:07:22] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:07:23] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:07:24] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:07:25] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+ * Detected change in '/home/ubuntu/cac-portal/routes/business_name.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 580-977-639
+102.89.76.164 - - [18/Jan/2026 22:13:56] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/ngo.py", line 45, in register_ngo
+    return render_template("ngo.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/ngo.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('business.business_name') }}">Business Name</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'business.business_name'. Did you mean 'business_name.index' instead?
+102.89.76.164 - - [18/Jan/2026 22:13:56] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:13:56] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:13:57] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:13:57] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+ * Detected change in '/home/ubuntu/cac-portal/app.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 250, in locate_app
+    raise NoAppException(
+flask.cli.NoAppException: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "/home/ubuntu/cac-portal/app.py", line 2, in <module>
+    from routes.company import business_name_bp
+ImportError: cannot import name 'business_name_bp' from 'routes.company' (/home/ubuntu/cac-portal/routes/company.py)
+
+ * Debugger is active!
+ * Debugger PIN: 201-284-682
+ * Detected change in '/home/ubuntu/cac-portal/templates/forms.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 250, in locate_app
+    raise NoAppException(
+flask.cli.NoAppException: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "/home/ubuntu/cac-portal/app.py", line 2, in <module>
+    from routes.company import business_name_bp
+ImportError: cannot import name 'business_name_bp' from 'routes.company' (/home/ubuntu/cac-portal/routes/company.py)
+
+ * Debugger is active!
+ * Debugger PIN: 201-284-682
+ * Detected change in '/home/ubuntu/cac-portal/forms.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 250, in locate_app
+    raise NoAppException(
+flask.cli.NoAppException: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "/home/ubuntu/cac-portal/app.py", line 2, in <module>
+    from routes.company import business_name_bp
+ImportError: cannot import name 'business_name_bp' from 'routes.company' (/home/ubuntu/cac-portal/routes/company.py)
+
+ * Debugger is active!
+ * Debugger PIN: 201-284-682
+ * Detected change in '/home/ubuntu/cac-portal/routes/ngo.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 250, in locate_app
+    raise NoAppException(
+flask.cli.NoAppException: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "/home/ubuntu/cac-portal/app.py", line 2, in <module>
+    from routes.company import business_name_bp
+ImportError: cannot import name 'business_name_bp' from 'routes.company' (/home/ubuntu/cac-portal/routes/company.py)
+
+ * Debugger is active!
+ * Debugger PIN: 201-284-682
+102.89.76.164 - - [18/Jan/2026 22:51:13] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 974, in app
+    raise err from None
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 250, in locate_app
+    raise NoAppException(
+flask.cli.NoAppException: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "/home/ubuntu/cac-portal/app.py", line 2, in <module>
+    from routes.company import business_name_bp
+ImportError: cannot import name 'business_name_bp' from 'routes.company' (/home/ubuntu/cac-portal/routes/company.py)
+
+102.89.76.164 - - [18/Jan/2026 22:51:14] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:51:14] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:51:16] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:51:16] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:52:39] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:55:18] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 974, in app
+    raise err from None
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/debug/__init__.py", line 347, in debug_application
+    app_iter = self.app(environ, start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 974, in app
+    raise err from None
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 250, in locate_app
+    raise NoAppException(
+flask.cli.NoAppException: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "/home/ubuntu/cac-portal/app.py", line 2, in <module>
+    from routes.company import business_name_bp
+ImportError: cannot import name 'business_name_bp' from 'routes.company' (/home/ubuntu/cac-portal/routes/company.py)
+
+102.89.76.164 - - [18/Jan/2026 22:55:34] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:55:39] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 22:55:40] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+ * Detected change in '/home/ubuntu/cac-portal/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 580-977-639
+ * Detected change in '/home/ubuntu/cac-portal/routes/company.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 580-977-639
+102.89.76.164 - - [18/Jan/2026 23:10:20] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/ngo.py", line 43, in register_ngo
+    return render_template("ngo_register.html", form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/ngo_register.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('business.business_name') }}">Business Name</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'business.business_name'. Did you mean 'business_name.index' instead?
+102.89.76.164 - - [18/Jan/2026 23:10:20] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:10:20] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:10:21] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:10:22] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:10:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+102.89.76.164 - - [18/Jan/2026 23:11:00] "GET / HTTP/1.1" 200 -
+102.89.76.164 - - [18/Jan/2026 23:17:58] "[33mGET /business/ HTTP/1.1[0m" 404 -
+102.89.76.164 - - [18/Jan/2026 23:18:17] "[35m[1mGET /company/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/company.py", line 49, in register_company
+    return render_template("company.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/company.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('business.business_name') }}">Business Name</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'business.business_name'. Did you mean 'business_name.index' instead?
+102.89.76.164 - - [18/Jan/2026 23:18:18] "[36mGET /company/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:18:18] "[36mGET /company/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:18:19] "[36mGET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:19:40] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+162.142.125.117 - - [18/Jan/2026 23:23:27] code 400, message Bad request version ('À\x14À')
+162.142.125.117 - - [18/Jan/2026 23:23:27] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03§<®¾ùi¬câ,Y\x96\x90çìôz\x19Ø%8\x95\x8dÅf\x1dXI\\\x1f*Â Êã\\HOto©ú\x8e\x8eÔ\x0cªX·r\x97p\x9e\x02½=?Ú\x1f\x7fãB\x05\x86_\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+162.142.125.117 - - [18/Jan/2026 23:23:27] "GET / HTTP/1.1" 200 -
+162.142.125.117 - - [18/Jan/2026 23:23:27] code 505, message Invalid HTTP version (2.0)
+162.142.125.117 - - [18/Jan/2026 23:23:27] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+162.142.125.117 - - [18/Jan/2026 23:23:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+162.142.125.117 - - [18/Jan/2026 23:23:31] code 400, message Bad request version ('À\x14À')
+162.142.125.117 - - [18/Jan/2026 23:23:31] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ô¿Q(;û\x04\x94\x0b{ùÐ\x0c´ì|Õ?C¼\x03r\x08 èÐÕÊù-\x8dÙ Ë-\x94;êhÓþê1%\x7fW)äZ\x8bî\x0e¿dÆ\x0fM´ÛêE\x92®ñ&\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+162.142.125.117 - - [18/Jan/2026 23:23:31] "[33mGET /login HTTP/1.1[0m" 404 -
+ * Detected change in '/home/ubuntu/cac-portal/app.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 963, in run_command
+    app: WSGIApplication = info.load_app()  # pyright: ignore
+                           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 349, in load_app
+    app = locate_app(import_name, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "/home/ubuntu/cac-portal/app.py", line 44, in <module>
+    if name == "main":
+       ^^^^
+NameError: name 'name' is not defined
+ * Debugger is active!
+ * Debugger PIN: 201-284-682
+ * Detected change in '/home/ubuntu/cac-portal/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 580-977-639
+102.89.76.164 - - [18/Jan/2026 23:38:58] "[33mGET /admin/dashoard HTTP/1.1[0m" 404 -
+102.89.76.164 - - [18/Jan/2026 23:39:30] "GET /health HTTP/1.1" 200 -
+102.89.76.164 - - [18/Jan/2026 23:39:56] "[35m[1mGET /admin/login HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/admin.py", line 41, in admin_login
+    return render_template("admin_login.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_login.html
+102.89.76.164 - - [18/Jan/2026 23:39:57] "GET /admin/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+102.89.76.164 - - [18/Jan/2026 23:39:57] "GET /admin/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+102.89.76.164 - - [18/Jan/2026 23:39:57] "GET /admin/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+102.89.76.164 - - [18/Jan/2026 23:39:58] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:42:47] "[33mGET /admin/admin/update_payment_ajax/<payment_id> HTTP/1.1[0m" 404 -
+102.89.76.164 - - [18/Jan/2026 23:42:59] "[33mGET /admin/admin/update_payment_ajax/ HTTP/1.1[0m" 404 -
+102.89.76.164 - - [18/Jan/2026 23:43:16] "[33mGET /admin/admin/ HTTP/1.1[0m" 404 -
+102.89.76.164 - - [18/Jan/2026 23:51:08] "[33mGET /admin/admin/ HTTP/1.1[0m" 404 -
+102.89.76.164 - - [18/Jan/2026 23:51:21] "[35m[1mGET /admin/login HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/admin.py", line 41, in admin_login
+    return render_template("admin_login.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/admin_login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('business.business_name') }}">Business Name</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'business.business_name'. Did you mean 'business_name.index' instead?
+102.89.76.164 - - [18/Jan/2026 23:51:21] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:51:22] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:51:22] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:52:11] "[31m[1mGET /admin/logout HTTP/1.1[0m" 401 -
+102.89.76.164 - - [18/Jan/2026 23:52:50] "[31m[1mGET /admin/dashboard HTTP/1.1[0m" 401 -
+102.89.76.164 - - [18/Jan/2026 23:53:37] "[31m[1mGET /admin/portal/status/update HTTP/1.1[0m" 405 -
+102.89.76.164 - - [18/Jan/2026 23:54:13] "[35m[1mGET /company/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/company.py", line 49, in register_company
+    return render_template("company.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/company.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('business.business_name') }}">Business Name</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'business.business_name'. Did you mean 'business_name.index' instead?
+102.89.76.164 - - [18/Jan/2026 23:54:14] "[36mGET /company/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:54:14] "[36mGET /company/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:54:14] "[36mGET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:54:44] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [18/Jan/2026 23:56:39] "[31m[1mGET /admin/dashboard HTTP/1.1[0m" 401 -
+102.89.76.164 - - [18/Jan/2026 23:57:49] "[35m[1mGET /admin/login HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/admin.py", line 41, in admin_login
+    return render_template("admin_login.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/admin_login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 17, in top-level template code
+    <a href="{{ url_for('business.business_name') }}">Business Name</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'business.business_name'. Did you mean 'business_name.index' instead?
+102.89.76.164 - - [18/Jan/2026 23:57:49] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:57:49] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [18/Jan/2026 23:57:50] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:15:28] "[35m[1mGET /admin/login HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/admin.py", line 41, in admin_login
+    return render_template("admin_login.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/admin_login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 18, in top-level template code
+    <a href="{{ url_for('auth.login') }}">Login</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.login'. Did you mean 'admin.admin_login' instead?
+102.89.76.164 - - [19/Jan/2026 00:15:29] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:15:29] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:15:31] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:21:30] "[35m[1mGET /admin/login HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/admin.py", line 41, in admin_login
+    return render_template("admin_login.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/admin_login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 19, in top-level template code
+    <a href="{{ url_for('admin.register') }}">Register</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'admin.register'. Did you mean 'ngo.register_ngo' instead?
+102.89.76.164 - - [19/Jan/2026 00:21:30] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:21:30] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:21:31] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:21:31] "[36mGET /admin/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:29:15] "GET /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:29:15] "GET /static/css/style.css HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:29:15] "GET /static/js/main.js HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:29:37] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:30:12] "GET /company/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:30:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:30:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:31:09] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:31:34] "[31m[1mGET /business/submit HTTP/1.1[0m" 405 -
+102.89.76.164 - - [19/Jan/2026 00:32:12] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:32:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:32:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:32:39] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:32:43] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:32:51] "GET /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:32:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:32:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:32:54] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:32:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:32:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:33:02] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:34:10] "[31m[1mGET /admin/dashboard HTTP/1.1[0m" 401 -
+102.89.76.164 - - [19/Jan/2026 00:34:27] "[31m[1mGET /admin/logout HTTP/1.1[0m" 401 -
+102.89.76.164 - - [19/Jan/2026 00:34:38] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+102.89.76.164 - - [19/Jan/2026 00:34:52] "GET /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:34:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:34:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:35:32] "POST /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:35:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:35:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:35:37] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:35:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:35:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:35:55] "POST /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:35:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:35:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:17] "POST /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:36:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:21] "POST /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:36:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:28] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:36:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:31] "GET /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:36:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:36:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:38:27] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:38:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:38:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:38:48] "[33mGET /ngo/register HTTP/1.1[0m" 404 -
+102.89.76.164 - - [19/Jan/2026 00:38:57] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:38:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:38:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:40:21] "GET /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:40:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:40:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:55:05] "GET /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:55:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:55:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:55:46] "POST /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:55:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:55:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:56:48] "POST /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:56:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:56:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:57:35] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:57:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:57:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:57:39] "GET /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:57:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:57:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:58:08] "POST /admin/login HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 00:58:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:58:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 00:59:04] "[32mPOST /admin/login HTTP/1.1[0m" 302 -
+102.89.76.164 - - [19/Jan/2026 00:59:05] "GET /admin/dashboard HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 01:27:14] "[35m[1mGET /admin/dashboard HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/admin.py", line 69, in dashboard
+    return render_template(
+           ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_dashboard.html
+102.89.76.164 - - [19/Jan/2026 01:27:14] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 01:27:14] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 01:27:16] "GET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 01:27:16] "[36mGET /admin/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 01:27:29] "[33mGET /login HTTP/1.1[0m" 404 -
+102.89.76.164 - - [19/Jan/2026 01:27:46] "[33mGET /user/login HTTP/1.1[0m" 404 -
+102.89.76.164 - - [19/Jan/2026 01:34:12] "GET /admin/dashboard HTTP/1.1" 200 -
+20.29.21.25 - - [19/Jan/2026 01:40:17] code 400, message Bad request version ('À\x14À')
+20.29.21.25 - - [19/Jan/2026 01:40:17] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03:1y\x86Áe&\x0f\x92  ÊN;\x15C\x92ì5\x0f^\x9a[«\x98\x0fNfHìX\x0d\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+20.29.21.25 - - [19/Jan/2026 01:40:18] code 400, message Bad request syntax ('MGLNDD_54.234.136.35_8000')
+20.29.21.25 - - [19/Jan/2026 01:40:18] "[31m[1mMGLNDD_54.234.136.35_8000[0m" 400 -
+102.89.76.164 - - [19/Jan/2026 01:46:57] "GET /admin/dashboard HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 01:47:32] "[33mGET /login HTTP/1.1[0m" 404 -
+102.89.76.164 - - [19/Jan/2026 01:48:28] "[35m[1mGET /ngo/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/ngo.py", line 43, in register_ngo
+    return render_template("ngo_register.html", form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/ngo_register.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 25, in top-level template code
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.logout'. Did you mean 'admin.admin_logout' instead?
+102.89.76.164 - - [19/Jan/2026 01:48:28] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 01:48:29] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 01:48:30] "[36mGET /ngo/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 01:48:45] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 01:48:56] "[35m[1mGET /company/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/company.py", line 49, in register_company
+    return render_template("company.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/company.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 25, in top-level template code
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.logout'. Did you mean 'admin.admin_logout' instead?
+102.89.76.164 - - [19/Jan/2026 01:48:56] "[36mGET /company/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 01:48:56] "[36mGET /company/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 01:48:57] "[36mGET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 01:53:19] "GET /admin/dashboard HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 02:02:33] "GET /admin/dashboard HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 02:03:45] "[35m[1mGET /company/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/routes/company.py", line 49, in register_company
+    return render_template("company.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ubuntu/cac-portal/templates/company.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ubuntu/cac-portal/templates/base.html", line 26, in top-level template code
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/cac-portal/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.logout'. Did you mean 'admin.admin_logout' instead?
+102.89.76.164 - - [19/Jan/2026 02:03:45] "[36mGET /company/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:03:46] "[36mGET /company/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:03:46] "[36mGET /company/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:10:15] "GET /company/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 02:10:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:10:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:10:37] "GET /ngo/ HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 02:10:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:10:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:10:43] "GET /business/index HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/cac-portal/routes/business_name.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 580-977-639
+102.89.76.164 - - [19/Jan/2026 02:38:11] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 02:38:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:38:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:38:32] "[32mPOST /business/submit HTTP/1.1[0m" 302 -
+102.89.76.164 - - [19/Jan/2026 02:38:33] "GET /business/index HTTP/1.1" 200 -
+102.89.76.164 - - [19/Jan/2026 02:38:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+102.89.76.164 - - [19/Jan/2026 02:38:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+52.21.227.35 - - [19/Jan/2026 02:48:49] code 400, message Bad request version ('À\x14À')
+52.21.227.35 - - [19/Jan/2026 02:48:49] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03PNËæá\\6\x95á\x08ÖV^6mt5L§¤\x91\x91\x8d)¦\x0enªi\x8c\x09> Â"®bØ\x92 \x87E#Jm\x92$ô-\x83í\x83\x89À§Ì[<\x85\x1bü?'÷\x8f\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+165.227.168.122 - - [19/Jan/2026 04:10:03] code 400, message Bad request version ('À\x14À')
+165.227.168.122 - - [19/Jan/2026 04:10:03] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x0f°\x1b`Âø\x95\x97¡\x16-\x9fo0e\x19é¯\x86J\x82\x1b0{&BLbXâ\x85í\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+165.227.168.122 - - [19/Jan/2026 04:10:04] code 400, message Bad request version ('À\x14À')
+165.227.168.122 - - [19/Jan/2026 04:10:04] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03v"/L7¤{Í\x84£\x8a¸\x1a½L"Ä:\x00µ5\x1c2±ª4\x8aô.ýëô\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+165.227.168.122 - - [19/Jan/2026 04:10:04] "GET / HTTP/1.1" 200 -
+165.227.168.122 - - [19/Jan/2026 04:10:04] "[33mGET /login HTTP/1.1[0m" 404 -
+87.251.69.219 - - [19/Jan/2026 05:54:57] "GET / HTTP/1.1" 200 -
+204.76.203.18 - - [19/Jan/2026 06:07:18] "GET / HTTP/1.1" 200 -
+204.76.203.18 - - [19/Jan/2026 06:17:59] "[33mGET /bins/ HTTP/1.1[0m" 404 -
+204.76.203.18 - - [19/Jan/2026 06:27:47] "[33mGET /bin/ HTTP/1.1[0m" 404 -
+204.76.203.18 - - [19/Jan/2026 06:33:21] "[33mGET /backup/ HTTP/1.1[0m" 404 -
+216.180.246.97 - - [19/Jan/2026 06:52:26] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¼´Pçí\x94\x9cê<üó!Ã`T»õú[áòFã3Rü¶¾\x05H¤\x18 ')
+216.180.246.97 - - [19/Jan/2026 06:52:26] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¼´Pçí\x94\x9cê<üó!Ã`T»õú[áòFã3Rü¶¾\x05H¤\x18 [0m" 400 -
+216.180.246.97 - - [19/Jan/2026 06:53:41] "GET / HTTP/1.1" 200 -
+216.180.246.97 - - [19/Jan/2026 07:16:14] code 400, message Bad request version ('À\x14À')
+216.180.246.97 - - [19/Jan/2026 07:16:14] "[31m[1m\x16\x03\x01\x00ú\x01\x00\x00ö\x03\x03¶Ém?T=\x00\x00\x05+\x96'dTD¡\x87\x8dzþáJ\x06g{\x9bF\x9b\x86®\x04\x09 [=©\x1a°d\x93z2÷Ý\x09(\x87\x8cq\x8e¼ûu8\x00ÀÙA\x02üçï\x97Ø²\x002À/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+216.180.246.97 - - [19/Jan/2026 07:16:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+8.219.230.175 - - [19/Jan/2026 10:08:42] "GET / HTTP/1.1" 200 -
+3.137.73.221 - - [19/Jan/2026 10:25:43] "GET / HTTP/1.1" 200 -
+3.137.73.221 - - [19/Jan/2026 10:25:43] "GET / HTTP/1.1" 200 -
+3.132.23.201 - - [19/Jan/2026 11:19:47] "GET / HTTP/1.1" 200 -
+3.132.23.201 - - [19/Jan/2026 11:21:49] "GET / HTTP/1.1" 200 -
+3.132.23.201 - - [19/Jan/2026 11:22:46] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x98åá÷\x9f\x92Ì\x8açzÌ\x01³a\x0fþV=§2x\x8e\x04J±\x19å\x8f¥\x11wø\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+3.132.23.201 - - [19/Jan/2026 11:22:46] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x98åá÷\x9f\x92Ì\x8açzÌ\x01³a\x0fþV=§2x\x8e\x04J±\x19å\x8f¥\x11wø\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+3.132.23.201 - - [19/Jan/2026 11:24:16] code 400, message Bad request syntax ('SSH-2.0-Go')
+3.132.23.201 - - [19/Jan/2026 11:24:16] "[31m[1mSSH-2.0-Go[0m" 400 -
+3.132.23.201 - - [19/Jan/2026 11:24:57] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03l¦?Êz_`Õï±ÿ\x81³²zëK\x91h')
+3.132.23.201 - - [19/Jan/2026 11:24:57] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03l¦?Êz_`Õï±ÿ\x81³²zëK\x91h[0m" 400 -
+152.32.234.184 - - [19/Jan/2026 17:17:12] "GET / HTTP/1.1" 200 -
+152.32.234.184 - - [19/Jan/2026 17:17:12] code 400, message Bad request version ('À\x13À')
+152.32.234.184 - - [19/Jan/2026 17:17:12] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03lÈ}õ\x89`H¡ÏÑ(#\x9a\x05Oþþ\x97¶\x0dAÎvr]\x92ât/wÝ\x16 -¼\x14Ñ7õ¿¦úM\x0dZ$ÿ\x8a\x011D\x9f)\\n\x1c\x8b\x06þk\x0f»\x9f\x9d\x0e\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+152.32.234.184 - - [19/Jan/2026 17:17:12] code 400, message Bad HTTP/0.9 request type ('t3')
+152.32.234.184 - - [19/Jan/2026 17:17:12] "[31m[1mt3 12.1.2[0m" 400 -
+101.36.108.9 - - [19/Jan/2026 17:31:06] "GET / HTTP/1.1" 200 -
+101.36.108.9 - - [19/Jan/2026 17:31:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+101.36.108.9 - - [19/Jan/2026 17:31:07] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+101.36.108.9 - - [19/Jan/2026 17:31:07] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
+102.89.75.153 - - [19/Jan/2026 20:30:51] "GET /business/index HTTP/1.1" 200 -
+68.183.52.79 - - [20/Jan/2026 00:19:14] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03r\x9cRãøÌLÆ$|nùç\x06\x07×UÎ')
+68.183.52.79 - - [20/Jan/2026 00:19:14] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03r\x9cRãøÌLÆ$|nùç\x06\x07×UÎ\x0dIÔÆ\x13\x80D2o[0m" 400 -
+68.183.52.79 - - [20/Jan/2026 00:19:14] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÒÏ·h;!\x18ZZ\x95\x11Oê\x89F];\x99t<n¯è5\x10"\'§×à¯Ì\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+68.183.52.79 - - [20/Jan/2026 00:19:14] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÒÏ·h;!\x18ZZ\x95\x11Oê\x89F];\x99t<n¯è5\x10"'§×à¯Ì\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+68.183.52.79 - - [20/Jan/2026 00:19:14] "GET / HTTP/1.1" 200 -
+68.183.52.79 - - [20/Jan/2026 00:19:14] "[33mGET /login HTTP/1.1[0m" 404 -
